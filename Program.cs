@@ -15,17 +15,17 @@ void FillArray(int[] inputArray)
 void FindMax (int [] inputArray, int inputSequence)
 {
 int temp = 0;
-for (int i = 0; i < array.Length - sequence; i++)
+for (int j = 0; j < inputSequence; j++)
 {
-    for (int j = i; j < i + inputSequence; j++)
-    {
-        temp = temp + array[j];
-        if (MAX < temp) MAX = temp;
-    }
-    temp = 0;
+    temp += array[j];
+}
+for (int i = 0; i < array.Length - inputSequence; i++)
+{
+    temp = temp - array[i] + array [i+inputSequence];
+    if (temp > MAX) MAX = temp;
 }
 }
 FillArray(array);
-FindMax(array, 3);
+FindMax(array, sequence);
 System.Console.WriteLine(String.Join(", ", array));
 System.Console.WriteLine($"Максимальное значение {sequence} последовательно идущих элементов: {MAX}");
