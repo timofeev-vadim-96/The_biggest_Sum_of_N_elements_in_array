@@ -25,9 +25,7 @@ for (int i = 0; i < array.Length - sequence; i++)
     temp = 0;
 }
 }
-
 FillArray(array);
 FindMax(array, 3);
 System.Console.WriteLine(String.Join(", ", array));
-
 System.Console.WriteLine($"Максимальное значение {sequence} последовательно идущих элементов: {MAX}");
