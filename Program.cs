@@ -15,7 +15,7 @@ void FillArray(int[] inputArray)
 }
 Stopwatch sw = new ();
 sw.Start();
-void FindMax (int [] inputArray, int inputSequence)
+void FindMax (int [] inputArray, int inputSequence) // 2-й способ - быстрее
 {
 int temp = 0;
 for (int j = 0; j < inputSequence; j++)
